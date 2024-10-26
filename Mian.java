@@ -5,8 +5,12 @@ public class Mian {
 
         std1.setGrade(18);
         std2.setGrade(17.5);
-
         std1.printStudentInfo();
         std2.printStudentInfo();
+
+        Lab class1 = new Lab("Mr.Smith","Monday", 30);
+        class1.enrollStudent(std1);
+        class1.enrollStudent(std2);
+        class1.printLabInfo();
     }
 }

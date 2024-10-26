@@ -15,25 +15,25 @@ public class Lab {
         this.maxSize = maxSize;
         // create an array of students with the size of "maxSize"
         students = new Student[maxSize];
+        currentSize = 0;
     }
     // methods
     public void enrollStudent(Student a) {
         // add new student
-        currentSize = 0;
         students[currentSize] = a;
         currentSize++;
     }
     public void calAvg (){
         double sumGrades = 0;
-        for ( int i = 0; i < maxSize; i++){
+        for ( int i = 0; i < currentSize; i++){
             sumGrades += students[i].getGrade();
         }
-        avgGrade = sumGrades / maxSize;
+        avgGrade = sumGrades / currentSize;
     }
 
     public void printLabInfo(){
         System.out.println(teacherName + "\n" + dayOfWeek + "\n" + "AVERAGE :" + avgGrade);
-        for ( int j = 0; j < maxSize; j++){
+        for ( int j = 0; j < currentSize; j++){
             students[j].printStudentInfo();
         }
     }

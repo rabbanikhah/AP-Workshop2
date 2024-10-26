@@ -9,8 +9,11 @@ public class Mian {
         std2.printStudentInfo();
 
         Lab class1 = new Lab("Mr.Smith","Monday", 30);
+        // enroll students
         class1.enrollStudent(std1);
         class1.enrollStudent(std2);
+        // calculate average grade
+        class1.calAvg();
         class1.printLabInfo();
     }
 }
